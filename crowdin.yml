@@ -1,18 +1,13 @@
-project_id: "815790"  # 必填：Crowdin 项目 ID（在项目设置中查看）
-api_token_env: "850bab94055b9eb7fed32b53436309ebbc1d0f4498880bfe90cf9779166b6d0c919ed04d708a1bc6"     # 必填：API Token 的环境变量名（推荐通过环境变量传入 Token）
-base_url: "https://api.crowdin.com"    # 默认API地址，一般无需修改
-
-# 文件同步规则
-files: 
-  - source: "target/en_US.json"            # 源文件路径（英文美国作为源语言）
-    translation: "target/%two_letters_code%.json"  # 翻译文件路径模板，支持各种语言代码
-    ignore: ["target/en_US.json"]           # 忽略源文件本身，避免重复上传
-    update_option: "update_without_changes"  # 文件更新策略：不改变现有翻译
-
-# 可选：语言映射配置
+project_id: '815790'
+api_token_env: 850bab94055b9eb7fed32b53436309ebbc1d0f4498880bfe90cf9779166b6d0c919ed04d708a1bc6
 languages_mapping:
-  "en-US": "en_US"
-  "zh-CN": "zh_CN"
-  "ru-RU": "ru_RU"
-  "id-ID": "id_ID"
-  "en-IN": "en_IN"
+  en-US: en_US
+  zh-CN: zh_CN
+  ru-RU: ru_RU
+  id-ID: id_ID
+  en-IN: en_IN
+base_url: 'https://api.crowdin.com'
+files:
+  - source: target/en_US.json
+    translation: target/%two_letters_code%.json
+    update_option: update_without_changes
